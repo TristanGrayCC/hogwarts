@@ -1,0 +1,12 @@
+ <section class = "student">
+ <%@students.each do |student|%>
+  <p>Name: <%= student.first_name %> <%= student.last_name %></p>
+  <p>House: <%= student.house.name %></p> 
+  <p>Age: <%= student.age %></p> 
+  <form method="post" action="/students/<%= student.id %>/delete" >
+  <input type="submit" value="Delete" />
+  </form>
+  <hr/>
+<% end %>
+</section>
+<img src="https://slack-imgs.com/?c=1&url=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F736x%2F11%2F9c%2F71%2F119c71210bd0f2ed7326bbc732cdd49d.jpg" class="student_page" style ="width: 40%; height:100%" >
